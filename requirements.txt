@@ -1,2 +1,0 @@
-Twisted==19.2.1
-pyOpenSSL==19.1.0
