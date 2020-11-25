@@ -3,8 +3,6 @@ Moneysocket Relay Daemon
 
 A straightforward websocket server that provides the rendezvous service for matching pairs of Moneysocket connections in rendezvous and forwarding encrypted messages between them.
 
-[Donate](https://socket.money/#donate)
-
 "Decentralization"
 ------------------------------------------------------------------------
 
@@ -12,7 +10,7 @@ The concept of a socket is universal and does not particularly need any sort of 
 
 Additional, web browsers typically only will want to connect to a server with a TLS certificate and typical end-users don't want to bypass their browser's security to enable WebSocket connections on their LAN.
 
-This particular app is running at `wss://relay.socket.money` as a convenient way to rendezvous two connections, however this is at expense of the project ([Donate](https://socket.money/#donate)). Also, it represents a single point of failure if it goes down and does not represent decentralization if this becomes critical infrastructure for production apps.
+This particular app is running at `wss://relay.socket.money` as a convenient way to rendezvous two connections, however this is at expense of the project ([donate](https://socket.money/#donate)). Also, it represents a single point of failure if it goes down and does not represent decentralization if this becomes critical infrastructure for production apps.
 
 If your app needs relay services, please consider hosting your own relay app.
 
@@ -30,7 +28,7 @@ This prevents the relay app host from observing the contents of the messages.
 Dependencies
 ------------------------------------------------------------------------
 
-This depends on `py-moneysocket`
+This depends on [py-moneysocket](https://github.com/moneysocket/py-moneysocket)
 
 `$ pip3 install https://github.com/moneysocket/py-moneysocket`
 
