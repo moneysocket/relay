@@ -15,7 +15,7 @@ from relay.app import Relay
 CONFIG_FILE_HELP = """ Configuration settings to app run instance with. """
 parser = argparse.ArgumentParser(prog="relay-app.py")
 parser.add_argument('-c', '--config', type=str,
-                    default="./relay/relay-0.conf",
+                    default="./conf/relay-example-no-tls.conf",
                     help=CONFIG_FILE_HELP)
 settings = parser.parse_args()
 
