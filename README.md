@@ -3,6 +3,12 @@ Moneysocket Relay Daemon
 
 A straightforward websocket server that provides the rendezvous service for matching pairs of Moneysocket connections in rendezvous and forwarding encrypted messages between them.
 
+Disclaimer!
+-----
+
+Moneysocket is still new, under development and is Reckless with your money. Use this stuff at your own risk.
+
+
 "Decentralization"
 ------------------------------------------------------------------------
 
