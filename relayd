@@ -5,11 +5,13 @@
 
 import os
 import argparse
+import datetime
 import logging
 from configparser import ConfigParser
 
 from twisted.internet import reactor
 
+from relay.log_setup import setup_logging
 from relay.app import Relay
 
 CONFIG_FILE_HELP = """ Configuration settings to app run instance with. """
@@ -28,10 +30,9 @@ config.read(settings.config)
 
 
 
-fmt = '%(asctime)s %(levelname)s: %(filename)s:%(lineno)d: %(message)s'
-datefmt = '%H:%M:%S'
-logging.basicConfig(format=fmt, datefmt=datefmt, level=logging.DEBUG)
-logging.info("using config: %s" % settings.config)
+now = datetime.datetime.now().strftime("%y%m%d-%H.%M.%S")
+logfile = os.path.join(config['Relay']['LogDir'], "relayd-%s.log" % now)
+setup_logging(logfile, "relayd", min_level=logging.INFO)
 
 app = Relay(config)
 app.run_app()
